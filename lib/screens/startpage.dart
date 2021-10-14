@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_food_delivery_app/screens/home_page.dart';
 
 class StartPage extends StatefulWidget {
   // const StartPage({required Key key}) : super(key: key);
@@ -52,23 +53,41 @@ class _StartPageState extends State<StartPage> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     // crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      //
+                      Expanded(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
 
-                      // SizedBox(height: 300,),
+                            // image: DecorationImage(
+                            //     fit: BoxFit.contain,
+                            //     image: AssetImage('assets/images/fooddelivery.png')),
+                          ),
+                          child: ClipRRect(
+
+                            borderRadius: BorderRadius.circular(50),
+                            child: Image.asset('assets/images/food_delivery.png'),
+                          ),
+                          // child: CircleAvatar(
+                          //   radius: 70,
+                          //   backgroundImage: AssetImage('assets/images/fooddelivery.png'),
+                          // ),
+                        ),
+                      ),
                       Container(
-                        height: MediaQuery.of(context).size.height / 4.5,
+
                         child: Text(
-                          'Order Food Online via. FoodieYum',
+                          'Order Food Online via. CraveYum',
                           style: TextStyle(
                               fontSize: 45,
                               color: Colors.white,
                               fontFamily: 'Roboto'),
                         ),
                       ),
-                      // SizedBox(
-                      //   height: 30,
-                      // ),
+                      SizedBox(
+                        height: 30,
+                      ),
                       Container(
+                        height: MediaQuery.of(context).size.height / 8.5,
                         child: Text(
                           'See Restaurants near by around your Location',
                           style: TextStyle(
@@ -89,7 +108,9 @@ class _StartPageState extends State<StartPage> {
                         ),
                         child: MaterialButton(
                           minWidth: double.infinity,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                          },
                           child: Text(
                             'Start Here',
                             style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
@@ -97,7 +118,7 @@ class _StartPageState extends State<StartPage> {
                         ),
                       ),
                       SizedBox(
-                        height: 5,
+                        height: 20,
                       ),
                       Align(
                           child: Text(
