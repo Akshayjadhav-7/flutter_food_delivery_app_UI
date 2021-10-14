@@ -12,9 +12,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white60,
+      backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        backgroundColor: Colors.white60,
+        backgroundColor: Colors.yellow[700],
         elevation: 0.0,
         actions: [
           // ignore: prefer_const_constructors
@@ -22,85 +22,88 @@ class HomePage extends StatelessWidget {
             onPressed: () {},
             icon: Icon(
               Icons.shopping_cart,
-              color: Colors.grey,
+              color: Colors.grey[700],
             ),
           ),
         ],
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // ignore: prefer_const_constructors
-          Padding(
-            padding: const EdgeInsets.all(10.0),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
             // ignore: prefer_const_constructors
-            child: Text(
-              'CraveYum',
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-            ),
-          ),
-          // ignore: prefer_const_constructors
-          SizedBox(
-            height: 10,
-          ),
-          Container(
-            height: 70,
-            child: Padding(
+            Padding(
               padding: const EdgeInsets.all(10.0),
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  GestureDetector(
-                      onTap: () {
-                        print('Pizza pressed');
-                      },
-                      child: makeCategory(isActive: true, title: 'Pizza')),
-                  makeCategory(isActive: false, title: 'Burgers'),
-                  makeCategory(isActive: false, title: 'Kebabs'),
-                  makeCategory(isActive: false, title: 'Desert'),
-                  makeCategory(isActive: false, title: 'Salad'),
-                ],
+              // ignore: prefer_const_constructors
+              child: Text(
+                'CraveYum',
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               ),
             ),
             // ignore: prefer_const_constructors
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          // ignore: prefer_const_constructors
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Text(
-              'Select Items',
-              style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.grey[800],
-                  fontWeight: FontWeight.bold),
+            SizedBox(
+              height: 10,
             ),
-          ),
-          Expanded(
-            child: Padding(
+            Container(
+              height: 70,
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    GestureDetector(
+                        onTap: () {
+                          print('Pizza pressed');
+                        },
+                        child: makeCategory(isActive: true, title: 'Pizza')),
+                    makeCategory(isActive: false, title: 'Burgers'),
+                    makeCategory(isActive: false, title: 'Kebabs'),
+                    makeCategory(isActive: false, title: 'Desert'),
+                    makeCategory(isActive: false, title: 'Salad'),
+                  ],
+                ),
+              ),
+              // ignore: prefer_const_constructors
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            // ignore: prefer_const_constructors
+            Padding(
               padding: const EdgeInsets.all(10.0),
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  makeItems(
-                      image: 'assets/images/one.jpg',
-                      price: '\$15',
-                      title: 'Veg Pizza'),
-                  makeItems(image: 'assets/images/two.jpg', price: '\$24',
-                      title: 'NonVeg Pizza'),
-                  makeItems(image: 'assets/images/three.jpg', price: '\$12',
-                      title: 'Kebab'),
-                  makeItems(image: 'assets/images/starter-image.jpg', price: '\$10',
-                      title: 'Salad'),
-                  makeItems(image: 'assets/images/one.jpg', price: '\$18',
-                      title: 'Paneer Tikka Pizza'),
-                ],
+              child: Text(
+                'Select Items',
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.grey[800],
+                    fontWeight: FontWeight.bold),
               ),
             ),
-          )
-        ],
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    makeItems(
+                        image: 'assets/images/one.jpg',
+                        price: '\$15',
+                        title: 'Veg Pizza'),
+                    makeItems(image: 'assets/images/two.jpg', price: '\$24',
+                        title: 'NonVeg Pizza'),
+                    makeItems(image: 'assets/images/three.jpg', price: '\$12',
+                        title: 'Kebab'),
+                    makeItems(image: 'assets/images/starter-image.jpg', price: '\$10',
+                        title: 'Salad'),
+                    makeItems(image: 'assets/images/one.jpg', price: '\$18',
+                        title: 'Paneer Tikka Pizza'),
+                  ],
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

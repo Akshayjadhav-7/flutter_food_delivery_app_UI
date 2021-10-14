@@ -2,6 +2,8 @@
 
 A new Flutter application.
 
+![News app flutter](https://github.com/Akshayjadhav-7/flutter_food_delivery_app_UI/blob/master/assets/images/screenshots.png)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

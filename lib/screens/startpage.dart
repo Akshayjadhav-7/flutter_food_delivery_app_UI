@@ -24,9 +24,9 @@ class _StartPageState extends State<StartPage> {
           ),
           child: Container(
             decoration: BoxDecoration(
-                gradient: LinearGradient(begin: Alignment.bottomRight, colors: [
-              Colors.black.withOpacity(0.8),
+                gradient: LinearGradient(begin: Alignment.center, colors: [
               Colors.black.withOpacity(0.7),
+              Colors.black.withOpacity(0.4),
               Colors.black.withOpacity(0.2),
             ])),
             child: Padding(
@@ -43,7 +43,7 @@ class _StartPageState extends State<StartPage> {
                         },
                         icon: Icon(
                           Icons.location_pin,
-                          size: 30,
+                          size: 20,
                           color: Colors.white,
                         ),
                       ),
