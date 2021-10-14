@@ -2,7 +2,9 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_food_delivery_app/screens/home_page.dart';
+
+import '../screens/home_page.dart';
+
 
 class StartPage extends StatefulWidget {
   // const StartPage({required Key key}) : super(key: key);
@@ -57,20 +59,11 @@ class _StartPageState extends State<StartPage> {
                         child: Container(
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-
-                            // image: DecorationImage(
-                            //     fit: BoxFit.contain,
-                            //     image: AssetImage('assets/images/fooddelivery.png')),
                           ),
                           child: ClipRRect(
-
                             borderRadius: BorderRadius.circular(50),
                             child: Image.asset('assets/images/food_delivery.png'),
                           ),
-                          // child: CircleAvatar(
-                          //   radius: 70,
-                          //   backgroundImage: AssetImage('assets/images/fooddelivery.png'),
-                          // ),
                         ),
                       ),
                       Container(
@@ -128,60 +121,6 @@ class _StartPageState extends State<StartPage> {
                     ],
                   ),
                 ],
-
-                // Column(
-                //   mainAxisAlignment: MainAxisAlignment.end,
-                //   // crossAxisAlignment: CrossAxisAlignment.start,
-                //   children: [
-                //     //
-                //     Icon(Icons.my_location,color: Colors.white,),
-                //         // SizedBox(height: 300,),
-                //     Container(
-                //       height: MediaQuery.of(context).size.height/4.5,
-                //       child: Text(
-                //         'Order Food Online via. FoodieYum',
-                //         style: TextStyle(fontSize: 45, color: Colors.white,fontFamily: 'Roboto'),
-                //       ),
-                //     ),
-                //     // SizedBox(
-                //     //   height: 30,
-                //     // ),
-                //     Container(
-                //
-                //       child: Text(
-                //         'See Restaurants near by around your Location',
-                //         style: TextStyle(
-                //             color: Colors.white.withOpacity(0.9), fontSize: 20),
-                //       ),
-                //     ),
-                //     SizedBox(
-                //       height: 100,
-                //     ),
-                //     Container(
-                //       margin: EdgeInsets.all(3),
-                //       decoration: BoxDecoration(
-                //         borderRadius: BorderRadius.circular(20),
-                //         gradient:
-                //             // ignore: prefer_const_literals_to_create_immutables
-                //             LinearGradient(colors: [Colors.yellow, Colors.orange]),
-                //       ),
-                //       child: MaterialButton(
-                //         minWidth: double.infinity,
-                //         onPressed: () {},
-                //         child: Text(
-                //           'Start Here',
-                //           style: TextStyle(fontWeight: FontWeight.bold),
-                //         ),
-                //       ),
-                //     ),
-                //     SizedBox(height: 5,),
-                //     Align(
-                //         child: Text(
-                //       'Now Delivering 24/7 at your Doorstep',
-                //       style: TextStyle(color: Colors.white.withOpacity(0.9)),
-                //     )),
-                //   ],
-                // ),
               ),
             ),
           ),

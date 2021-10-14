@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_food_delivery_app/screens/home_page.dart';
-import 'package:flutter_food_delivery_app/screens/startpage.dart';
+
+
+import '../screens/home_page.dart';
+import '../screens/startpage.dart';
+
 
 void main() {
   runApp(MyApp());

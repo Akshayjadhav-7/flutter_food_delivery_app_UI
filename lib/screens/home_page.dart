@@ -1,14 +1,11 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
+
 import 'package:flutter/widgets.dart';
 
 class HomePage extends StatelessWidget {
-  // const HomePage({Key key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,13 +87,21 @@ class HomePage extends StatelessWidget {
                         image: 'assets/images/one.jpg',
                         price: '\$15',
                         title: 'Veg Pizza'),
-                    makeItems(image: 'assets/images/two.jpg', price: '\$24',
+                    makeItems(
+                        image: 'assets/images/two.jpg',
+                        price: '\$24',
                         title: 'NonVeg Pizza'),
-                    makeItems(image: 'assets/images/three.jpg', price: '\$12',
+                    makeItems(
+                        image: 'assets/images/three.jpg',
+                        price: '\$12',
                         title: 'Kebab'),
-                    makeItems(image: 'assets/images/starter-image.jpg', price: '\$10',
+                    makeItems(
+                        image: 'assets/images/starter-image.jpg',
+                        price: '\$10',
                         title: 'Salad'),
-                    makeItems(image: 'assets/images/one.jpg', price: '\$18',
+                    makeItems(
+                        image: 'assets/images/one.jpg',
+                        price: '\$18',
                         title: 'Paneer Tikka Pizza'),
                   ],
                 ),
@@ -139,13 +144,6 @@ class HomePage extends StatelessWidget {
         child: Container(
           margin: EdgeInsets.only(right: 15),
           decoration: BoxDecoration(
-            // gradient: LinearGradient(
-            //     begin: Alignment.bottomRight,
-            //     stops: [0.2,0.9],
-            //     colors: [
-            //   Colors.black.withOpacity(0.9),
-            //   Colors.black.withOpacity(0.3),
-            // ]),
             borderRadius: BorderRadius.circular(20),
             image: DecorationImage(image: AssetImage(image), fit: BoxFit.cover),
           ),
@@ -200,10 +198,6 @@ class HomePage extends StatelessWidget {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20),
                               ),
-
-                              // BeveledRectangleBorder(
-                              //     borderRadius: BorderRadius.all(Radius.circular(20)),
-                              // ),
                               backgroundColor: Colors.grey,
                               elevation: 0.0,
                               child: Center(
